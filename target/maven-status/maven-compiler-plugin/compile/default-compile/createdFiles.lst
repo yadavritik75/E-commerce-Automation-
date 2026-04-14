@@ -1,0 +1,8 @@
+Amazon\resources\ExtentReportsNG.class
+Amazon\Abstractcomponents\abstractcomponents.class
+Amazon\pageObjects\landingPage.class
+Amazon\pageObjects\confirmationPage.class
+Amazon\pageObjects\OrderPage.class
+Amazon\pageObjects\checkoutPage.class
+Amazon\pageObjects\productCatalogue.class
+Amazon\pageObjects\cartPage.class
