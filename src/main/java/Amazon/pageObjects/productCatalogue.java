@@ -28,7 +28,12 @@ public class productCatalogue extends abstractcomponents {
 		@FindBy(css=".ng-animating")
 		WebElement animation;
 		
+		@FindBy(xpath="(//input[@name='search'])[2]")
+		WebElement search;
 		
+		
+		@FindBy(xpath="(//b[text()='Search'])[2]")
+		WebElement searchButton;
 		
 		
 		By productsBy=By.cssSelector(".mb-3");
@@ -59,7 +64,12 @@ public class productCatalogue extends abstractcomponents {
 			
 		}
 		
-		
+		public void searchProduct(String productName)
+		{
+			search.sendKeys(productName);
+			searchButton.click();
+			waitForElementToAppear(productsBy);
+		}
 			
 
 }

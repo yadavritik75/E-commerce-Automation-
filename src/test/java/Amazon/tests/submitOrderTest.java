@@ -58,6 +58,7 @@ public class submitOrderTest extends baseTest {
 	}
 	
 	
+	
 	//dataprovider is used to run the same test with different sets of data
 			//return new Object [] [] {{"honeyritikjob75@gmail.com","jaihanumaN@123#","ZARA COAT 3"},{"rahulshettyacademy@gmail.com","Iamking@000","ADIDAS ORIGINAL"}};
 	//Pass the data as HashMap
@@ -71,6 +72,13 @@ public class submitOrderTest extends baseTest {
 //			map1.put("email","rahulshettyacademy@gmail.com");
 //			map1.put("password","Iamking@000");
 //			map1.put("productName", "ADIDAS ORIGINAL");
-	
-	
+	@Test
+	public void applyFilters()
+	{
+		productCatalogue ProductCatalogue = LandingPage.loginApplication("honeyritikjob75@gmail.com",
+				"jaihanumaN@123#");
+		ProductCatalogue.searchProduct(productName);
+		Assert.assertTrue(ProductCatalogue.getProductByName(productName).isDisplayed());
+		
+	}
 }

@@ -1,116 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-11T16:54:45 IST" name="Suite" finished-at="2026-04-11T16:55:34 IST" duration-ms="48743">
+  <suite started-at="2026-04-20T09:49:00 IST" name="Default suite" finished-at="2026-04-20T09:49:07 IST" duration-ms="6868">
     <groups>
-      <group name="Smoke Testing">
-        <method signature="ErrorValidationTest.LoginErrorValidation()[pri:0, instance:Amazon.tests.ErrorValidationTest@55c53a33]" name="LoginErrorValidation" class="Amazon.tests.ErrorValidationTest"/>
-      </group> <!-- Smoke Testing -->
-      <group name="purchase">
-        <method signature="submitOrderTest.submitOrder(java.util.HashMap)[pri:0, instance:Amazon.tests.submitOrderTest@c667f46]" name="submitOrder" class="Amazon.tests.submitOrderTest"/>
-      </group> <!-- purchase -->
     </groups>
-    <test started-at="2026-04-11T16:54:45 IST" name="Submit Order Test" finished-at="2026-04-11T16:55:21 IST" duration-ms="36148">
+    <test started-at="2026-04-20T09:49:00 IST" name="Default test" finished-at="2026-04-20T09:49:07 IST" duration-ms="6868">
       <class name="Amazon.tests.submitOrderTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Amazon.tests.submitOrderTest@c667f46]" started-at="2026-04-11T16:54:45 IST" name="launchApplication" finished-at="2026-04-11T16:54:50 IST" duration-ms="4483" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Amazon.tests.submitOrderTest@7c9d8e2]" started-at="2026-04-20T09:49:00 IST" name="launchApplication" finished-at="2026-04-20T09:49:05 IST" duration-ms="4526" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:Amazon.tests.submitOrderTest@c667f46]" started-at="2026-04-11T16:54:50 IST" name="submitOrder" data-provider="getData" finished-at="2026-04-11T16:54:58 IST" duration-ms="8168" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{password=jaihanumaN@123#, email=honeyritikjob75@gmail.com, productName=ZARA COAT 3}]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="applyFilters()[pri:0, instance:Amazon.tests.submitOrderTest@7c9d8e2]" started-at="2026-04-20T09:49:05 IST" name="applyFilters" finished-at="2026-04-20T09:49:06 IST" duration-ms="1945" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- submitOrder -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Amazon.tests.submitOrderTest@c667f46]" started-at="2026-04-11T16:54:58 IST" name="tearDown" finished-at="2026-04-11T16:54:58 IST" duration-ms="365" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Amazon.tests.submitOrderTest@c667f46]" started-at="2026-04-11T16:54:58 IST" name="launchApplication" finished-at="2026-04-11T16:55:02 IST" duration-ms="3244" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:Amazon.tests.submitOrderTest@c667f46]" started-at="2026-04-11T16:55:02 IST" name="submitOrder" data-provider="getData" finished-at="2026-04-11T16:55:07 IST" duration-ms="5281" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{password=Iamking@000, email=rahulshettyacademy@gmail.com, productName=ADIDAS ORIGINAL}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- submitOrder -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Amazon.tests.submitOrderTest@c667f46]" started-at="2026-04-11T16:55:07 IST" name="tearDown" finished-at="2026-04-11T16:55:07 IST" duration-ms="377" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Amazon.tests.submitOrderTest@c667f46]" started-at="2026-04-11T16:55:07 IST" name="launchApplication" finished-at="2026-04-11T16:55:11 IST" duration-ms="3225" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:Amazon.tests.submitOrderTest@c667f46]" started-at="2026-04-11T16:55:11 IST" name="submitOrder" data-provider="getData" finished-at="2026-04-11T16:55:16 IST" duration-ms="5362" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{password=Iamking@000, email=rahulshettyacademy@gmail.com, productName=iphone 13 pro}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- submitOrder -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Amazon.tests.submitOrderTest@c667f46]" started-at="2026-04-11T16:55:16 IST" name="tearDown" finished-at="2026-04-11T16:55:16 IST" duration-ms="328" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Amazon.tests.submitOrderTest@c667f46]" started-at="2026-04-11T16:55:16 IST" name="launchApplication" finished-at="2026-04-11T16:55:20 IST" duration-ms="3250" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="orderHistoryTest()[pri:0, instance:Amazon.tests.submitOrderTest@c667f46]" started-at="2026-04-11T16:55:20 IST" name="orderHistoryTest" finished-at="2026-04-11T16:55:21 IST" depends-on-methods="Amazon.tests.submitOrderTest.submitOrder" duration-ms="1202" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- orderHistoryTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Amazon.tests.submitOrderTest@c667f46]" started-at="2026-04-11T16:55:21 IST" name="tearDown" finished-at="2026-04-11T16:55:21 IST" duration-ms="277" status="PASS">
+        </test-method> <!-- applyFilters -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Amazon.tests.submitOrderTest@7c9d8e2]" started-at="2026-04-20T09:49:06 IST" name="tearDown" finished-at="2026-04-20T09:49:07 IST" duration-ms="307" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- Amazon.tests.submitOrderTest -->
-    </test> <!-- Submit Order Test -->
-    <test started-at="2026-04-11T16:55:22 IST" name="Error Validation Test" finished-at="2026-04-11T16:55:34 IST" duration-ms="11974">
-      <class name="Amazon.tests.ErrorValidationTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Amazon.tests.ErrorValidationTest@55c53a33]" started-at="2026-04-11T16:55:22 IST" name="launchApplication" finished-at="2026-04-11T16:55:25 IST" duration-ms="3075" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="LoginErrorValidation()[pri:0, instance:Amazon.tests.ErrorValidationTest@55c53a33]" started-at="2026-04-11T16:55:25 IST" name="LoginErrorValidation" finished-at="2026-04-11T16:55:26 IST" duration-ms="875" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LoginErrorValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Amazon.tests.ErrorValidationTest@55c53a33]" started-at="2026-04-11T16:55:26 IST" name="tearDown" finished-at="2026-04-11T16:55:26 IST" duration-ms="346" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Amazon.tests.ErrorValidationTest@55c53a33]" started-at="2026-04-11T16:55:26 IST" name="launchApplication" finished-at="2026-04-11T16:55:28 IST" duration-ms="1711" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="productErrorValidation()[pri:0, instance:Amazon.tests.ErrorValidationTest@55c53a33]" started-at="2026-04-11T16:55:28 IST" name="productErrorValidation" finished-at="2026-04-11T16:55:33 IST" duration-ms="5567" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- productErrorValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Amazon.tests.ErrorValidationTest@55c53a33]" started-at="2026-04-11T16:55:33 IST" name="tearDown" finished-at="2026-04-11T16:55:34 IST" duration-ms="377" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Amazon.tests.ErrorValidationTest -->
-    </test> <!-- Error Validation Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
