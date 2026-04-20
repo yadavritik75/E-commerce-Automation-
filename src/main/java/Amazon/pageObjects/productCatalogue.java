@@ -1,5 +1,6 @@
 package Amazon.pageObjects;
 
+import java.util.Arrays;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -7,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import Amazon.Abstractcomponents.abstractcomponents;
 
@@ -61,7 +63,30 @@ public class productCatalogue extends abstractcomponents {
 			prod.findElement(addToCart).click();
 			waitForElementToAppear(toastMessage);
 			 waitForElementToDisappear(animation);
+			 waitForElementToDisappeared(toastMessage);
 			
+		}
+		
+		public void addMultipleProductsToCart(String productNames) throws InterruptedException
+		{
+		    List<String> listNeeded = Arrays.asList(productNames.split(","));
+		    getProductList();
+
+		    for(WebElement product : products)
+		    {
+		        String name = product.findElement(By.cssSelector("b")).getText();
+
+		        if(listNeeded.contains(name))
+		        {
+		        	
+		            product.findElement(addToCart).click();
+		            
+		            waitForElementToAppear(toastMessage);
+		            waitForElementToDisappear(animation);
+		            waitForElementToDisappeared(toastMessage);
+		            
+		        }
+		    }
 		}
 		
 		public void searchProduct(String productName)

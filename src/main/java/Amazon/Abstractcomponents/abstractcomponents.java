@@ -53,6 +53,13 @@ public abstract class  abstractcomponents {
 //		wait.until(ExpectedConditions.invisibilityOf(ele));
 	}
 	
+	public void waitForElementToDisappeared(By findBy) throws InterruptedException
+	{
+		Thread.sleep(1000);
+//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+//		wait.until(ExpectedConditions.invisibilityOf(ele));
+	}
+	
 	public void scrollAndClick(WebElement element) {
 	    
 	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));

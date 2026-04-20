@@ -1,5 +1,6 @@
 package Amazon.pageObjects;
 
+import java.util.Arrays;
 import java.util.List;
 
 import org.openqa.selenium.WebDriver;
@@ -37,6 +38,17 @@ public class cartPage extends abstractcomponents {
 			boolean match = cartProducts.stream()
 					.anyMatch(cartProduct -> cartProduct.getText().equalsIgnoreCase(productName));
 			return match;
+		}
+		
+		public boolean verifyMultipleProductDisplay(String productNames)
+		{
+		    List<String> expectedProducts = Arrays.asList(productNames.split(","));
+
+		    return expectedProducts.stream()
+		            .allMatch(expectedProduct ->
+		                    cartProducts.stream()
+		                            .anyMatch(cartProduct ->
+		                                    cartProduct.getText().trim().equalsIgnoreCase(expectedProduct.trim())));
 		}
 		public checkoutPage goToCheckout()
 		{

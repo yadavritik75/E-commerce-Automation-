@@ -37,6 +37,7 @@ public class submitOrderTest extends baseTest {
 		Assert.assertTrue(confirmationMessage.equalsIgnoreCase("Thankyou for the order."));
 
 	}
+	
 	@Test(dependsOnMethods= {"submitOrder"})
 	public void orderHistoryTest()
 	{
