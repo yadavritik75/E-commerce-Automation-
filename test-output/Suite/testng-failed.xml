@@ -1,28 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" parallel="tests" name="Error Validation Test(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="Amazon.Testcomponents.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="Submit Order Test2(failed)">
+    <groups>
+      <run>
+        <include name="purchasedLaptop"/>
+      </run>
+    </groups>
     <classes>
-      <class name="Amazon.tests.ErrorValidationTest">
+      <class name="Amazon.tests.submitOrderTest2">
         <methods>
           <include name="tearDown"/>
-          <include name="LoginErrorValidation"/>
           <include name="launchApplication"/>
-          <include name="productErrorValidation"/>
+          <include name="submitOrder3" invocation-numbers="0"/>
         </methods>
-      </class> <!-- Amazon.tests.ErrorValidationTest -->
+      </class> <!-- Amazon.tests.submitOrderTest2 -->
     </classes>
-  </test> <!-- Error Validation Test(failed) -->
-  <test thread-count="5" parallel="tests" name="Submit Order Test(failed)">
-    <classes>
-      <class name="Amazon.tests.submitOrderTest">
-        <methods>
-          <include name="orderHistoryTest"/>
-          <include name="tearDown"/>
-          <include name="submitOrder" invocation-numbers="0"/>
-          <include name="launchApplication"/>
-        </methods>
-      </class> <!-- Amazon.tests.submitOrderTest -->
-    </classes>
-  </test> <!-- Submit Order Test(failed) -->
+  </test> <!-- Submit Order Test2(failed) -->
 </suite> <!-- Failed suite [Suite] -->

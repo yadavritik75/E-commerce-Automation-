@@ -46,10 +46,41 @@ public class submitOrderTest2 extends baseTest {
 		
 		List<HashMap<String,String>>data=getJsonDataToMap(System.getProperty("user.dir")+"\\src\\test\\java\\Amazon\\data\\purchaseOrder2.json");
 
-		return new Object[][] {{data.get(0)}};
+		return new Object[][] {
+		    {data.get(0)}
+		};
 		
 	}
+	
+	@DataProvider
+	public Object[][] getData1() throws IOException
+	{
+		
+		List<HashMap<String,String>>data=getJsonDataToMap(System.getProperty("user.dir")+"\\src\\test\\java\\Amazon\\data\\purchaseOrder2.json");
 
+		return new Object[][] {
+		    {data.get(1)}
+		};
+		
+	}
+@Test(dataProvider="getData1",groups= {"purchasedLaptop"})
+	public void submitOrder3(HashMap<String,String>input) throws InterruptedException
+	{
+		productCatalogue ProductCatalogue = LandingPage.loginApplication(input.get("email"),input.get("password"));
+		List<WebElement> products = ProductCatalogue.getProductList();
+		ProductCatalogue.addProductToCart(input.get("productName"));
+		cartPage CartPage = ProductCatalogue.goToCartPage();
+		List<WebElement> cartProducts = CartPage.getCartProducts();
+		boolean match = CartPage.verifyProductDisplay(input.get("productName"));
+		Assert.assertTrue(match);
+		checkoutPage CheckoutPage = CartPage.goToCheckout();
+		CheckoutPage.enterCardDetails("4542 9931 9292 2293");
+		CheckoutPage.selectCountry("India");
+		confirmationPage ConfirmationPage = CheckoutPage.submitOrder();
+		String confirmationMessage = ConfirmationPage.getConfirmationMessage();
+		Assert.assertTrue(confirmationMessage.equalsIgnoreCase("Thankyou for the order."));
+	}
+	
 }
 
 

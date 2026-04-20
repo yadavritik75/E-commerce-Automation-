@@ -103,7 +103,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Amazon.tests.submitOrderTest2" class="method navigator-link" hash-for-method="submitOrder2({password=jaihanumaN@123#, email=honeyritikjob75@gmail.com, productName=ZARA COAT 3,ADIDAS ORIGINAL,...)">submitOrder2({password=jaihanumaN@123#, email=honeyritikjob75@gmail.com, productName=ZARA COAT 3,ADIDAS ORIGINAL,...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="Amazon.tests.submitOrderTest2" class="method navigator-link" hash-for-method="submitOrder3({password=jaihanumaN@123#, email=honeyritikjob75@gmail.com, productName=IPHONE 13 PRO})">submitOrder3({password=jaihanumaN@123#, email=honeyritikjob75@gmail.com, productName=IPHONE 13 PRO})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -126,10 +126,10 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="submitOrder2({password=jaihanumaN@123#, email=honeyritikjob75@gmail.com, productName=ZARA COAT 3,ADIDAS ORIGINAL,...)">
-                  </a> <!-- submitOrder2({password=jaihanumaN@123#, email=honeyritikjob75@gmail.com, productName=ZARA COAT 3,ADIDAS ORIGINAL,...) -->
-                  <span class="method-name">submitOrder2</span>
-                  <span class="parameters">({password=jaihanumaN@123#, email=honeyritikjob75@gmail.com, productName=ZARA COAT 3,ADIDAS ORIGINAL,IPHONE 13 PRO})</span>
+                  <a name="submitOrder3({password=jaihanumaN@123#, email=honeyritikjob75@gmail.com, productName=IPHONE 13 PRO})">
+                  </a> <!-- submitOrder3({password=jaihanumaN@123#, email=honeyritikjob75@gmail.com, productName=IPHONE 13 PRO}) -->
+                  <span class="method-name">submitOrder3</span>
+                  <span class="parameters">({password=jaihanumaN@123#, email=honeyritikjob75@gmail.com, productName=IPHONE 13 PRO})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -144,6 +144,16 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;groups&gt;
+    &lt;run&gt;
+      &lt;include name=&quot;purchasedLaptop&quot;/&gt;
+    &lt;/run&gt;
+  &lt;/groups&gt;
+  &lt;groups&gt;
+    &lt;run&gt;
+      &lt;include name=&quot;purchasedLaptop&quot;/&gt;
+    &lt;/run&gt;
+  &lt;/groups&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;Amazon.Testcomponents.Listeners&quot;/&gt;
   &lt;/listeners&gt;
@@ -174,10 +184,10 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">purchased</span>
+              <span class="test-group-name">purchasedLaptop</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">submitOrder2</span>
+                <span class="method-in-group-name">submitOrder3</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -199,14 +209,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'submitOrder2')
+data.setCell(0, 1, 'submitOrder3')
 data.setCell(0, 2, 'Amazon.tests.submitOrderTest2')
-data.setCell(0, 3, 15437);
+data.setCell(0, 3, 10525);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 15 seconds</span>
+              <span class="suite-total-time">Total running time: 10 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -221,9 +231,16 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">1 ignored method</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">Amazon.tests.submitOrderTest2</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">submitOrder2</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -238,12 +255,12 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">submitOrder2({password=jaihanumaN@123#, email=honeyritikjob75@gmail.com, productName=ZARA COAT 3,ADIDAS ORIGINAL,...)</span>
-                <span class="method-start">5687 ms</span>
+                <span class="method-name">submitOrder3({password=jaihanumaN@123#, email=honeyritikjob75@gmail.com, productName=IPHONE 13 PRO})</span>
+                <span class="method-start">3581 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">21142 ms</span>
+                <span class="method-start">14121 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
