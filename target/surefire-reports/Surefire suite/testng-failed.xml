@@ -7,10 +7,19 @@
         <methods>
           <include name="orderHistoryTest"/>
           <include name="tearDown"/>
-          <include name="submitOrder" invocation-numbers="2"/>
+          <include name="submitOrder"/>
+          <include name="applyFilters"/>
           <include name="launchApplication"/>
         </methods>
       </class> <!-- Amazon.tests.submitOrderTest -->
+      <class name="Amazon.tests.ErrorValidationTest">
+        <methods>
+          <include name="LoginErrorValidation"/>
+          <include name="tearDown"/>
+          <include name="launchApplication"/>
+          <include name="productErrorValidation"/>
+        </methods>
+      </class> <!-- Amazon.tests.ErrorValidationTest -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->

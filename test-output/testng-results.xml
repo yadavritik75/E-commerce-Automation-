@@ -1,35 +1,208 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="2" total="7" passed="3" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-20T23:29:54 IST" name="Suite" finished-at="2026-04-20T23:30:09 IST" duration-ms="15115">
+  <suite started-at="2026-05-09T14:53:55 IST" name="Suite" finished-at="2026-05-09T14:54:53 IST" duration-ms="57943">
     <groups>
-      <group name="purchasedLaptop">
-        <method signature="submitOrderTest2.submitOrder3(java.util.HashMap)[pri:0, instance:Amazon.tests.submitOrderTest2@1ec9bd38]" name="submitOrder3" class="Amazon.tests.submitOrderTest2"/>
-      </group> <!-- purchasedLaptop -->
+      <group name="Smoke Testing">
+        <method signature="ErrorValidationTest.LoginErrorValidation()[pri:0, instance:Amazon.tests.ErrorValidationTest@4e07b95f]" name="LoginErrorValidation" class="Amazon.tests.ErrorValidationTest"/>
+      </group> <!-- Smoke Testing -->
+      <group name="purchase">
+        <method signature="submitOrderTest.submitOrder(java.util.HashMap)[pri:0, instance:Amazon.tests.submitOrderTest@1ec9bd38]" name="submitOrder" class="Amazon.tests.submitOrderTest"/>
+      </group> <!-- purchase -->
     </groups>
-    <test started-at="2026-04-20T23:29:54 IST" name="Submit Order Test2" finished-at="2026-04-20T23:30:09 IST" duration-ms="15115">
-      <class name="Amazon.tests.submitOrderTest2">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Amazon.tests.submitOrderTest2@1ec9bd38]" started-at="2026-04-20T23:29:54 IST" name="launchApplication" finished-at="2026-04-20T23:29:58 IST" duration-ms="3579" status="PASS">
+    <test started-at="2026-05-09T14:53:55 IST" name="Submit Order Test" finished-at="2026-05-09T14:54:39 IST" duration-ms="43783">
+      <class name="Amazon.tests.submitOrderTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Amazon.tests.submitOrderTest@1ec9bd38]" started-at="2026-05-09T14:53:55 IST" name="launchApplication" finished-at="2026-05-09T14:54:00 IST" duration-ms="4539" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="submitOrder3(java.util.HashMap)[pri:0, instance:Amazon.tests.submitOrderTest2@1ec9bd38]" started-at="2026-04-20T23:29:58 IST" name="submitOrder3" data-provider="getData1" finished-at="2026-04-20T23:30:09 IST" duration-ms="10525" status="PASS">
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:Amazon.tests.submitOrderTest@1ec9bd38]" started-at="2026-05-09T14:54:00 IST" name="submitOrder" data-provider="getData" finished-at="2026-05-09T14:54:06 IST" duration-ms="6064" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{password=jaihanumaN@123#, email=honeyritikjob75@gmail.com, productName=IPHONE 13 PRO}]]>
+                <![CDATA[{password=jaihanumaN@123#, email=honeyritikjob75@gmail.com, productName=ZARA COAT 3}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- submitOrder3 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Amazon.tests.submitOrderTest2@1ec9bd38]" started-at="2026-04-20T23:30:09 IST" name="tearDown" finished-at="2026-04-20T23:30:09 IST" duration-ms="519" status="PASS">
+        </test-method> <!-- submitOrder -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Amazon.tests.submitOrderTest@1ec9bd38]" started-at="2026-05-09T14:54:06 IST" name="tearDown" finished-at="2026-05-09T14:54:06 IST" duration-ms="337" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- Amazon.tests.submitOrderTest2 -->
-    </test> <!-- Submit Order Test2 -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Amazon.tests.submitOrderTest@1ec9bd38]" started-at="2026-05-09T14:54:06 IST" name="launchApplication" finished-at="2026-05-09T14:54:11 IST" duration-ms="4457" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:Amazon.tests.submitOrderTest@1ec9bd38]" started-at="2026-05-09T14:54:11 IST" name="submitOrder" data-provider="getData" finished-at="2026-05-09T14:54:21 IST" duration-ms="10469" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=Iamking@000, email=rahulshettyacademy@gmail.com, productName=ADIDAS ORIGINAL}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element found by By.cssSelector: .mb-3, but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".mb-3"}.
+(tried for 5 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.96, chrome: {chromedriverVersion: 148.0.7778.97 (6b3fa66a923a..., userDataDir: C:\Users\Ritik\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63844}, goog:processID: 16652, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63844/devtoo..., se:cdpVersion: 148.0.7778.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1930ec7f5db13ac31080e6740937e2a3]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.cssSelector: .mb-3, but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".mb-3"}.
+(tried for 5 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.96, chrome: {chromedriverVersion: 148.0.7778.97 (6b3fa66a923a..., userDataDir: C:\Users\Ritik\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63844}, goog:processID: 16652, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63844/devtoo..., se:cdpVersion: 148.0.7778.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1930ec7f5db13ac31080e6740937e2a3
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:233)
+at Amazon.Abstractcomponents.abstractcomponents.waitForElementToAppear(abstractcomponents.java:38)
+at Amazon.pageObjects.productCatalogue.getProductList(productCatalogue.java:47)
+at Amazon.tests.submitOrderTest.submitOrder(submitOrderTest.java:26)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitOrder -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Amazon.tests.submitOrderTest@1ec9bd38]" started-at="2026-05-09T14:54:22 IST" name="tearDown" finished-at="2026-05-09T14:54:24 IST" duration-ms="2062" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Amazon.tests.submitOrderTest@1ec9bd38]" started-at="2026-05-09T14:54:24 IST" name="launchApplication" finished-at="2026-05-09T14:54:25 IST" duration-ms="1628" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:Amazon.tests.submitOrderTest@1ec9bd38]" started-at="2026-05-09T14:54:25 IST" name="submitOrder" data-provider="getData" finished-at="2026-05-09T14:54:38 IST" duration-ms="12649" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=Iamking@000, email=rahulshettyacademy@gmail.com, productName=iphone 13 pro}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element found by By.cssSelector: .mb-3, but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".mb-3"}.
+(tried for 5 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.96, chrome: {chromedriverVersion: 148.0.7778.97 (6b3fa66a923a..., userDataDir: C:\Users\Ritik\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63873}, goog:processID: 21332, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63873/devtoo..., se:cdpVersion: 148.0.7778.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 364cdcb5f7a0878ccc41be57c9847249]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.cssSelector: .mb-3, but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".mb-3"}.
+(tried for 5 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.96, chrome: {chromedriverVersion: 148.0.7778.97 (6b3fa66a923a..., userDataDir: C:\Users\Ritik\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63873}, goog:processID: 21332, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63873/devtoo..., se:cdpVersion: 148.0.7778.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 364cdcb5f7a0878ccc41be57c9847249
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:233)
+at Amazon.Abstractcomponents.abstractcomponents.waitForElementToAppear(abstractcomponents.java:38)
+at Amazon.pageObjects.productCatalogue.getProductList(productCatalogue.java:47)
+at Amazon.tests.submitOrderTest.submitOrder(submitOrderTest.java:26)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitOrder -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Amazon.tests.submitOrderTest@1ec9bd38]" started-at="2026-05-09T14:54:38 IST" name="tearDown" finished-at="2026-05-09T14:54:39 IST" duration-ms="372" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Amazon.tests.submitOrderTest -->
+    </test> <!-- Submit Order Test -->
+    <test started-at="2026-05-09T14:54:39 IST" name="Error Validation Test" finished-at="2026-05-09T14:54:53 IST" duration-ms="13437">
+      <class name="Amazon.tests.ErrorValidationTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Amazon.tests.ErrorValidationTest@4e07b95f]" started-at="2026-05-09T14:54:39 IST" name="launchApplication" finished-at="2026-05-09T14:54:43 IST" duration-ms="3905" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="LoginErrorValidation()[pri:0, instance:Amazon.tests.ErrorValidationTest@4e07b95f]" started-at="2026-05-09T14:54:43 IST" name="LoginErrorValidation" finished-at="2026-05-09T14:54:44 IST" duration-ms="669" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginErrorValidation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Amazon.tests.ErrorValidationTest@4e07b95f]" started-at="2026-05-09T14:54:44 IST" name="tearDown" finished-at="2026-05-09T14:54:44 IST" duration-ms="311" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Amazon.tests.ErrorValidationTest@4e07b95f]" started-at="2026-05-09T14:54:44 IST" name="launchApplication" finished-at="2026-05-09T14:54:46 IST" duration-ms="1419" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="productErrorValidation()[pri:0, instance:Amazon.tests.ErrorValidationTest@4e07b95f]" started-at="2026-05-09T14:54:46 IST" name="productErrorValidation" finished-at="2026-05-09T14:54:52 IST" duration-ms="6748" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productErrorValidation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Amazon.tests.ErrorValidationTest@4e07b95f]" started-at="2026-05-09T14:54:52 IST" name="tearDown" finished-at="2026-05-09T14:54:53 IST" duration-ms="358" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Amazon.tests.ErrorValidationTest -->
+    </test> <!-- Error Validation Test -->
   </suite> <!-- Suite -->
 </testng-results>

@@ -38,9 +38,9 @@ public class baseTest {
 		        : prop.getProperty("browser");
 		  ChromeOptions options = new ChromeOptions();
 
-		    if (browserName.contains("headless")) {
-		        options.addArguments("--headless");
-		    }
+		  //  if (browserName.contains("headless")) {
+		        //options.addArguments("--headless");
+		 //   }
 
 		    if (browserName.contains("chrome")) {
 		        driver = new ChromeDriver(options);

@@ -4,20 +4,20 @@
   <listeners>
     <listener class-name="Amazon.Testcomponents.Listeners"/>
   </listeners>
-  <test thread-count="5" name="Submit Order Test2(failed)">
+  <test thread-count="5" name="Submit Order Test(failed)">
     <groups>
       <run>
-        <include name="purchasedLaptop"/>
+        <include name="purchase"/>
       </run>
     </groups>
     <classes>
-      <class name="Amazon.tests.submitOrderTest2">
+      <class name="Amazon.tests.submitOrderTest">
         <methods>
           <include name="tearDown"/>
+          <include name="submitOrder" invocation-numbers="1 2"/>
           <include name="launchApplication"/>
-          <include name="submitOrder3" invocation-numbers="0"/>
         </methods>
-      </class> <!-- Amazon.tests.submitOrderTest2 -->
+      </class> <!-- Amazon.tests.submitOrderTest -->
     </classes>
-  </test> <!-- Submit Order Test2(failed) -->
+  </test> <!-- Submit Order Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

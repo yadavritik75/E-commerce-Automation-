@@ -63,7 +63,7 @@ public class submitOrderTest2 extends baseTest {
 		};
 		
 	}
-@Test(dataProvider="getData1",groups= {"purchasedLaptop"})
+@Test(dataProvider="getData1",groups= {"purchaseSingleItem"})
 	public void submitOrder3(HashMap<String,String>input) throws InterruptedException
 	{
 		productCatalogue ProductCatalogue = LandingPage.loginApplication(input.get("email"),input.get("password"));

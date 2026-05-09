@@ -10,22 +10,10 @@
         <methods>
           <include name="orderHistoryTest"/>
           <include name="tearDown"/>
-          <include name="submitOrder"/>
+          <include name="submitOrder" invocation-numbers="1 2"/>
           <include name="launchApplication"/>
         </methods>
       </class> <!-- Amazon.tests.submitOrderTest -->
     </classes>
   </test> <!-- Submit Order Test(failed) -->
-  <test thread-count="5" name="Error Validation Test(failed)" verbose="0">
-    <classes>
-      <class name="Amazon.tests.ErrorValidationTest">
-        <methods>
-          <include name="LoginErrorValidation"/>
-          <include name="tearDown"/>
-          <include name="launchApplication"/>
-          <include name="productErrorValidation"/>
-        </methods>
-      </class> <!-- Amazon.tests.ErrorValidationTest -->
-    </classes>
-  </test> <!-- Error Validation Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

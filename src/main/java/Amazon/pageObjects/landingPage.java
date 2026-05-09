@@ -11,7 +11,7 @@ public class landingPage extends abstractcomponents {
 	WebDriver driver;
 	public landingPage(WebDriver driver)
 	{
-		super(driver);
+		super(driver); //Implicit super constructor abstractcomponents() is undefined. Must explicitly invoke another constructor
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
