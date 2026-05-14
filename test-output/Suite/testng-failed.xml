@@ -5,14 +5,10 @@
     <listener class-name="Amazon.Testcomponents.Listeners"/>
   </listeners>
   <test thread-count="5" name="Submit Order Test(failed)">
-    <groups>
-      <run>
-        <include name="purchase"/>
-      </run>
-    </groups>
     <classes>
       <class name="Amazon.tests.submitOrderTest">
         <methods>
+          <include name="orderHistoryTest"/>
           <include name="tearDown"/>
           <include name="submitOrder" invocation-numbers="1 2"/>
           <include name="launchApplication"/>
